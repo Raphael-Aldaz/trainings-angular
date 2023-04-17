@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { TrainingComponent } from './components/training/training.component';
 import { FormsModule } from '@angular/forms';
 import { CartComponent } from './components/cart/cart.component';
-import { CustomerFormComponent } from './customer-form/customer-form.component';
+import { CustomerFormComponent } from './components/customer-form/customer-form.component';
+
 
 @NgModule({
   declarations: [

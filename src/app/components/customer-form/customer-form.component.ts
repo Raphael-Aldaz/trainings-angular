@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { Customer } from '../model/Customer';
+
 import { NgForm } from '@angular/forms';
-import { CartService } from '../service/cart.service';
+
 import { Router } from '@angular/router';
+import { Customer } from 'src/app/model/Customer';
+import { CartService } from 'src/app/service/cart.service';
 
 @Component({
   selector: 'app-customer-form',
@@ -16,6 +18,7 @@ constructor(private cartService: CartService, private router : Router){
 }
 onSaveCustomer(customer: Customer, myForm: NgForm){
   myForm.reset();
+  localStorage.removeItem("trainings");
   this.cartService.saveCustomer(customer);
 }
 getCustomer():Customer{
