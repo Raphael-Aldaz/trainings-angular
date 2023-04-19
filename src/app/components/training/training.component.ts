@@ -20,7 +20,7 @@ export class TrainingComponent implements OnInit {
   addTraining(training : Training){
     this.cartService.trainingCart.push(training)
     this.cartService.saveCart(this.cartService.trainingCart);
-    this.router.navigateByUrl('/cart')
+
     console.log(training,'component')
   }
 }
